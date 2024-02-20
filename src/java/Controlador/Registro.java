@@ -4,6 +4,7 @@
  */
 package Controlador;
 
+import Modelo.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -30,7 +31,9 @@ public class Registro extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
+        Usuario us = new Usuario();
         
+        us.setUsuario(request.getParameter("txtUser"));
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -40,7 +43,7 @@ public class Registro extends HttpServlet {
             out.println("<title>Servlet Registro</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Registro at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet Registro de: " + us.getUsuario() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

@@ -7,11 +7,11 @@
         <title>pirobo</title>
     </head>
     <body>
-        <h1>formulario asqueroso</h1>
+        <h1>Formulario de Contacto</h1>
         
         <form method="post" action="Registro">
             <label>Usuario: </label><br>
-            <input type="email" name="txtUser" placeholder="Usuario">
+            <input type="text" name="txtUser" placeholder="Usuario">
             
             <label>Contraseña:</label><br>
             <input type="password" name="txtPass" placeholder="Contraseña">
